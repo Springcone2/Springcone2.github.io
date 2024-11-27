@@ -8,7 +8,7 @@ async function getData(selected_major) {
 
     var templateText = document.getElementById('majorTemplate').innerHTML;
     var compiledTemplateText = Handlebars.compile(templateText);
-    compiledHtml = compiledTemplateText({ rows: meal_items })
+    compiledHtml = compiledTemplateText({ rows: major_items })
     document.getElementById('majorTable').innerHTML = compiledHtml;
   }
   else {
