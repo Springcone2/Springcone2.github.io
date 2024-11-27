@@ -12,6 +12,6 @@ async function getData(selected_major) {
     document.getElementById('majorTable').innerHTML = compiledHtml;
   }
   else {
-    document.querySelector('#menuTable').innerHTML = "There was an error, or major items not found";
+    document.querySelector('#majorTable').innerHTML = "There was an error, or major items not found";
   }
 }
