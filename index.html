@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html><head><title>speeding tickets</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	  
-	<script src="https://unpkg.com/vue@next"></script>
+ <script src="https://unpkg.com/vue@next"></script>
 	  
 </head>
 <body>
@@ -37,11 +37,11 @@
 				<th>Violater Sex</th>
 			</tr>
 			<tr v-for = "ticket in tickets">
-				<td>{{ticket.tid}}</td>
-				<td>{{ticket.stop_time}}</td>
-				<td>{{ticket.posted_speed}}</td>
-				<td>{{ticket.actual_speed - ticket.posted_speed}}</td>
-				<td>{{ticket.violator_sex}}</td>
+			    <td>{{ticket.tid}}</td>
+			    <td>{{ticket.stop_time}}</td>
+			    <td>{{ticket.posted_speed}}</td>
+			    <td>{{ticket.actual_speed - ticket.posted_speed}}</td>
+			    <td>{{ticket.violator_sex}}</td>
 			</tr>
 		</table>
 		
@@ -52,7 +52,7 @@
 	let app = Vue.createApp({
 		data() {
 			return {
-				tickets: [],
+			    tickets: [],
 			}
 		},
 		created() {
@@ -62,7 +62,6 @@
 			async getData() {
 				const response = await fetch('tickets1.json')
 				this.tickets = await response.json()
-				//tickets = data.filter( (item) => item.major == majSelect );
 			},
 		}
 	})
